@@ -2,3 +2,4 @@ build/
 .history
 dist/
 aaiotrello.egg-info
+.pypirc
