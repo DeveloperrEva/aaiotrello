@@ -3,7 +3,7 @@ from .utils import request
 
 
 class Organizations(object):
-    __module__ = 'atrello'
+    __module__ = 'aaiotrello'
 
     def __init__(self, apikey, token=None):
         self._apikey = apikey

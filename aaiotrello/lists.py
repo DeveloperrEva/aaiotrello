@@ -3,7 +3,7 @@ from .utils import request
 
 
 class Lists(object):
-    __module__ = 'atrello'
+    __module__ = 'aaiotrello'
 
     def __init__(self, apikey, token=None):
         self._apikey = apikey
@@ -53,8 +53,8 @@ class Lists(object):
         resp = await request.post("https://api.trello.com/1/lists" % (), params=dict(key=self._apikey, token=self._token), data=dict(name=name, idBoard=idBoard))
         return resp
 
-    async def new_card(self, list_id, name, desc=None):
-        resp = await request.post("https://api.trello.com/1/lists/%s/cards" % (list_id), params=dict(key=self._apikey, token=self._token), data=dict(name=name, desc=desc))
+    async def new_card(self, list_id, name, desc=None, due=None, idMembers=None):
+        resp = await request.post("https://api.trello.com/1/lists/%s/cards" % (list_id), params=dict(key=self._apikey, token=self._token), data=dict(name=name, desc=desc, due=due, idMembers=idMembers))
         return resp
     
     async def move_list_to_board(self, list_id, value):

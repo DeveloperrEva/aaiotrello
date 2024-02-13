@@ -2,7 +2,7 @@ from setuptools import setup
 from textwrap import dedent
 
 setup(name='aaiotrello',
-      version='1',
+      version='1.0.1',
       packages=['aaiotrello'],
       description='Async Python library for interacting with the Trello API',
       long_description=dedent("""\
@@ -34,13 +34,9 @@ setup(name='aaiotrello',
       requires='requests',
       license='BSD License',
       classifiers=[
-          "Development Status :: 1 - Beta",
-              'Intended Audience :: Developers',
-              'License :: OSI Approved :: BSD License',
-              'Operating System :: OS Independent',
-              'Programming Language :: Python',
-              'Programming Language :: Python :: 3',
-              'Programming Language :: Python :: 3.6',
-      ],
+	    	"Programming Language :: Python :: 3.6",
+	    	"License :: OSI Approved :: MIT License",
+	    	"Operating System :: OS Independent",
+	    ],
       include_package_data=True,
       )
