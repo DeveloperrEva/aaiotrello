@@ -2,7 +2,7 @@ from setuptools import setup
 from textwrap import dedent
 
 setup(name='aaiotrello',
-      version='1.0.1',
+      version='1.0.2',
       packages=['aaiotrello'],
       description='Async Python library for interacting with the Trello API',
       long_description=dedent("""\
