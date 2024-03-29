@@ -1,4 +1,4 @@
-## EN
+## English
 
 # aaiotrello
 Async Trello API Client
