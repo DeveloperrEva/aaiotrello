@@ -12,6 +12,7 @@ from .notifications import Notifications
 from .organizations import Organizations
 from .tokens import Tokens
 from .types import Types
+from .webhooks import Webhooks
 
 
 class TrelloApi(object):
@@ -28,6 +29,7 @@ class TrelloApi(object):
         self.organizations = Organizations(apikey, token)
         self.tokens = Tokens(apikey, token)
         self.types = Types(apikey, token)
+        self.webhooks = Webhooks(apikey, token)
 
     def set_token(self, token):
         self._token = token
@@ -41,6 +43,7 @@ class TrelloApi(object):
         self.organizations._token = token
         self.tokens._token = token
         self.types._token = token
+        self.webhooks._token = token
 
     def get_token_url(self, app_name, expires='never', write_access=True):
         return 'https://trello.com/1/authorize?key=%s&name=%s&expiration=%s&response_type=token&scope=%s' % (self._apikey, quote_plus(app_name), expires, 'read,write' if write_access else 'read')
